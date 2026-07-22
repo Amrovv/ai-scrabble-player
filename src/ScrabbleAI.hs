@@ -57,15 +57,19 @@ scoreWord (a:as) = letterValue a + 2 * scoreWord as
 
 -- Every dictionary word that can be spelled from the tiles in the rack.
 -- (word \\ rack) removes the rack's letters from the word; if nothing is left
--- then the rack covers the whole word.
+-- then the rack covers the whole word. The length check throws out words that
+-- are obviously too long before doing the more expensive \\.
 possibleWords :: [Char] -> [String]
-possibleWords rack = [ word | word <- allWords, null (word \\ rack)]
+possibleWords rack = [ word | word <- allWords, length word <= rackLen, null (word \\ rack)]
+  where rackLen = length rack
 
 -- Best scoring word we can play from the rack, or Nothing if none fit.
+-- Score each word once up front so maximumBy isn't recomputing scoreWord over
+-- and over during the comparisons.
 bestWord :: [Char] -> Maybe String
 bestWord rack = case possibleWords rack of
     [] -> Nothing
-    words -> Just (maximumBy (compare `on` scoreWord) words)
+    words -> Just (snd (maximumBy (compare `on` fst) [(scoreWord w, w) | w <- words]))
 
 
 -- Go through the rack and mark each tile Used or Unused depending on whether the
