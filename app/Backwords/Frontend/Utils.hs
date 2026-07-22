@@ -7,7 +7,7 @@
   might be of interest to those of you looking to go deeper into advanced
   Haskell programming.
 
-  Your code should go in src/CourseworkOne.hs.
+  Your code should go in src/ScrabbleAI.hs.
 -}
 module Backwords.Frontend.Utils where
 

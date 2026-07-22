@@ -6,7 +6,7 @@
 --  might be of interest to those of you looking to go deeper into advanced
 --  Haskell programming.
 --
---  Your code should go in src/CourseworkOne.hs.
+--  Your code should go in src/ScrabbleAI.hs.
 module Backwords.Frontend.Widgets where
 
 import Backwords.BasicGame
@@ -16,7 +16,7 @@ import Backwords.Types hiding (PlayWord)
 import Brick hiding (Down)
 import Brick.Widgets.Border
 import Brick.Widgets.Center
-import CourseworkOne qualified as CW
+import ScrabbleAI qualified as CW
 import Data.Char (toLower, toUpper)
 import Data.List qualified as List
 import Data.Maybe (fromMaybe)

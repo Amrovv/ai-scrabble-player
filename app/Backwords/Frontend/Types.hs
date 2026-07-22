@@ -4,7 +4,7 @@
   might be of interest to those of you looking to go deeper into advanced
   Haskell programming.
 
-  Your code should go in src/CourseworkOne.hs.
+  Your code should go in src/ScrabbleAI.hs.
 -}
 module Backwords.Frontend.Types where
 
@@ -14,7 +14,7 @@ import Backwords.BasicGame
 
 import Data.Set qualified as Set
 import Data.Set (Set)
-import qualified CourseworkOne as CW
+import qualified ScrabbleAI as CW
 import Backwords.Frontend.Utils
 
 --------------------------------------------------------------------------------
