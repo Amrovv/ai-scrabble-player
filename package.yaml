@@ -1,0 +1,72 @@
+name:                backwords
+version:             0.1.0.0
+author:              "Alex Dixon"
+maintainer:          "alexander.dixon@warwick.ac.uk"
+copyright:           "2026 Alex Dixon"
+
+extra-source-files:
+- assets/words.txt
+
+description:         "Haskell implementation of word game Wordle, used as coursework for CS141 Functional Programming at the University of Warwick."
+
+
+language:    GHC2021
+
+dependencies:
+- base >= 4.7 && < 5
+- containers
+- file-embed
+- random
+
+default-extensions:
+- TypeSynonymInstances
+- FlexibleInstances
+- RecordWildCards
+- LambdaCase
+
+
+library:
+  source-dirs: src
+
+executables:
+  backwords-tui:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - backwords
+    - brick
+    - text
+    - ansi-terminal
+    - vty
+    - vty-crossplatform
+    - containers
+    when:        
+    - condition: false        
+      other-modules: Paths_backwords
+
+tests:
+  backwords-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - backwords
+    - tasty
+    - tasty-hunit
+    - tasty-quickcheck
+    - QuickCheck
+    - ansi-terminal
+    - bytestring
+    - SHA
+    - containers
+    - split
+    when:        
+    - condition: false        
+      other-modules: Paths_backwords

@@ -1,0 +1,10 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "backwords:lib"
+
+    - path: "./app/Backwords/Frontend"
+      component: "backwords:exe:backwords-tui"
+
+    - path: "./test"
+      component: "backwords:test:backwords-test"
