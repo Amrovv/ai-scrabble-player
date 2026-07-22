@@ -1,5 +1,5 @@
 
-module CourseworkOne where
+module ScrabbleAI where
 
 import Backwords.Types
 import Backwords.WordList

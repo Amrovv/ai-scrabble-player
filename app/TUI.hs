@@ -9,7 +9,7 @@
 --     might be of interest to those of you looking to go deeper into advanced
 --     Haskell programming.
 --
---     Your code should go in src/CourseworkOne.hs.
+--     Your code should go in src/ScrabbleAI.hs.
 module TUI where
 
 import Brick hiding (Down)
@@ -19,7 +19,7 @@ import Control.Applicative (asum)
 import Control.Concurrent
 import Control.Monad (forever, replicateM, void, when)
 import Control.Monad.IO.Class (liftIO)
-import CourseworkOne qualified as CW
+import ScrabbleAI qualified as CW
 import Data.List qualified as List
 import Data.Maybe (fromMaybe)
 import Data.Ratio ((%))

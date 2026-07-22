@@ -23,7 +23,7 @@ import Test.QuickCheck.Test (test)
 import Backwords.Types
 import Backwords.BasicGame
 import Backwords.WordList
-import CourseworkOne
+import ScrabbleAI
 
 import Data.List.Split (splitOn)
 

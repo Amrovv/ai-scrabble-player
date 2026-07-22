@@ -6,15 +6,15 @@
 --     might be of interest to those of you looking to go deeper into advanced
 --     Haskell programming.
 --
---     Your code should go in src/CourseworkOne.hs.
+--     Your code should go in src/ScrabbleAI.hs.
 module Backwords.BasicGame where
 
-import CourseworkOne
+import ScrabbleAI
 import Data.List qualified as List
 import Data.Ord (Down (..), comparing)
 import Backwords.Types
 import System.Random (randomRIO)
-import qualified CourseworkOne as CW
+import qualified ScrabbleAI as CW
 
 -- |
 --   Perform a Fisher-Yates shuffle on the bag
